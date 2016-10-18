@@ -16,7 +16,8 @@
 		5F5A537E1ADE67D500F81DF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5A537D1ADE67D500F81DF0 /* AppDelegate.swift */; };
 		5F5A53801ADE67D500F81DF0 /* FCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5A537F1ADE67D500F81DF0 /* FCViewController.swift */; };
 		AC1D89F01DB562F300CE00F7 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D89EF1DB562F300CE00F7 /* SignUp.swift */; };
-		AC51A56A1DAAFCE700956878 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC51A5691DAAFCE600956878 /* GoogleService-Info.plist */; };
+		AC31EA591DB6788200B5AB26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC31EA581DB6788200B5AB26 /* GoogleService-Info.plist */; };
+		AC7651911DB5BA7000CA0756 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7651901DB5BA7000CA0756 /* SettingsViewController.swift */; };
 		ACD1A8641DAEB88200E361E3 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD1A8631DAEB88100E361E3 /* ChannelsViewController.swift */; };
 		CFCD38BC706BA931070B4816 /* Pods_FriendlyChatSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FFD743F00971AED45B2AF0 /* Pods_FriendlyChatSwift.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +38,8 @@
 		63FFD743F00971AED45B2AF0 /* Pods_FriendlyChatSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriendlyChatSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E552D1582E60781FB8771A /* Pods-FriendlyChatSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyChatSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyChatSwift/Pods-FriendlyChatSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		AC1D89EF1DB562F300CE00F7 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
-		AC51A5691DAAFCE600956878 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC31EA581DB6788200B5AB26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC7651901DB5BA7000CA0756 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACD1A8631DAEB88100E361E3 /* ChannelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,7 @@
 		5F5A53431ADE670C00F81DF0 = {
 			isa = PBXGroup;
 			children = (
-				AC51A5691DAAFCE600956878 /* GoogleService-Info.plist */,
+				AC31EA581DB6788200B5AB26 /* GoogleService-Info.plist */,
 				10D602881D5A2F9F004530C6 /* shared */,
 				5F5A537A1ADE67D500F81DF0 /* FriendlyChatSwift */,
 				5F5A534D1ADE670C00F81DF0 /* Products */,
@@ -85,6 +87,7 @@
 				5F5A537B1ADE67D500F81DF0 /* Supporting Files */,
 				ACD1A8631DAEB88100E361E3 /* ChannelsViewController.swift */,
 				AC1D89EF1DB562F300CE00F7 /* SignUp.swift */,
+				AC7651901DB5BA7000CA0756 /* SettingsViewController.swift */,
 			);
 			path = FriendlyChatSwift;
 			sourceTree = "<group>";
@@ -151,8 +154,8 @@
 				TargetAttributes = {
 					5F5A53781ADE67D500F81DF0 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = EQHXZ8M8AV;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -186,7 +189,7 @@
 			files = (
 				107960731C612531003DB6CC /* Main.storyboard in Resources */,
 				10D602891D5A2F9F004530C6 /* shared in Resources */,
-				AC51A56A1DAAFCE700956878 /* GoogleService-Info.plist in Resources */,
+				AC31EA591DB6788200B5AB26 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +256,7 @@
 				AC1D89F01DB562F300CE00F7 /* SignUp.swift in Sources */,
 				2CA807BC1B21702E009AD7F2 /* MeasurementHelper.swift in Sources */,
 				2C595F061B34B73A00355AE7 /* Constants.swift in Sources */,
+				AC7651911DB5BA7000CA0756 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,14 +368,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9E552D1582E60781FB8771A /* Pods-FriendlyChatSwift.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/FriendlyChatSwift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.firebase.codelab.FriendlyChatSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dartchat.swift3;
 				PRODUCT_NAME = FriendlyChatSwift;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -383,14 +386,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 53CDE3AB2B117AA006F60F6B /* Pods-FriendlyChatSwift.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/FriendlyChatSwift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.firebase.codelab.FriendlyChatSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dartchat.swift3;
 				PRODUCT_NAME = FriendlyChatSwift;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

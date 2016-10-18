@@ -21,7 +21,7 @@ class FCViewController: UIViewController, UITableViewDataSource, UITableViewDele
 
   var ref: FIRDatabaseReference!
   var messages: [FIRDataSnapshot]! = []
-  var msglength: NSNumber = 150
+  var msglength: NSNumber = 550
   fileprivate var _refHandle: FIRDatabaseHandle!
 
   var storageRef: FIRStorageReference!
@@ -31,7 +31,7 @@ class FCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
   @IBOutlet weak var clientTable: UITableView!
     
-    var channel1 = "1"
+    var channel1 = "another one"
     var channel2 = "2"
     
   override func viewDidLoad() {
@@ -54,7 +54,9 @@ class FCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         // Listen for new messages in the Firebase database
         //_refHandle = self.ref.child("messages").observe(.childAdded, with: { [weak self] (snapshot) -> Void in
             
-            _refHandle = self.ref.child("messages").queryOrdered(byChild: "channel").queryEqual(toValue: "1").observe(.childAdded, with: { [weak self] (snapshot) -> Void in
+        _refHandle = self.ref.child("messages").queryOrdered(byChild: "channel").queryEqual(toValue: channel1).observe(.childAdded, with: { [weak self] (snapshot) -> Void in
+
+        //_refHandle = self.ref.child("messages").observe(.childAdded, with: { [weak self] (snapshot) -> Void in
 
             //let temp = snapshot.childSnapshot(forPath: ("channel"))
             //print (temp)
@@ -66,7 +68,7 @@ class FCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func configureStorage() {
         
-        storageRef = FIRStorage.storage().reference(forURL: "gs://swift3dartapp.appspot.com/")
+        storageRef = FIRStorage.storage().reference(forURL: "gs://dartapp-a5b55.appspot.com/")
     }
 
   func configureRemoteConfig() {
@@ -87,10 +89,7 @@ class FCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         expirationDuration = 0
     }
     
-    // cacheExpirationSeconds is set to cacheExpiration here, indicating that any previously
-    // fetched and cached config would be considered expired because it would have been fetched
-    // more than cacheExpiration seconds ago. Thus the next fetch would go to the server unless
-    // throttling is in progress. The default expiration duration is 43200 (12 hours).
+    
     remoteConfig.fetch(withExpirationDuration: expirationDuration) { (status, error) in
         if (status == .success) {
             print("Config fetched!")
@@ -108,6 +107,9 @@ class FCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
   }
 
+    @IBAction func pressSettings(_ sender: AnyObject) {
+        performSegue(withIdentifier: "settings", sender: nil)
+    }
   @IBAction func didSendMessage(_ sender: UIButton) {
     textFieldShouldReturn(textField)
     textField.text = ""
@@ -127,26 +129,34 @@ class FCViewController: UIViewController, UITableViewDataSource, UITableViewDele
   }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Dequeue cell
+        
         let cell = self.clientTable .dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
         // Unpack message from Firebase DataSnapshot
         let messageSnapshot: FIRDataSnapshot! = self.messages[indexPath.row]
         let message = messageSnapshot.value as! Dictionary<String, String>
-        
-        //Doesnt work to filter
-        //let channel = message[Constants.MessageFields.channel] as String!
-        
         let name = message[Constants.MessageFields.name] as String!
-        let text = message[Constants.MessageFields.text] as String!
-            
+        if let imageURL = message[Constants.MessageFields.imageURL] {
+            if imageURL.hasPrefix("gs://") {
+                FIRStorage.storage().reference(forURL: imageURL).data(withMaxSize: INT64_MAX){ (data, error) in
+                    if let error = error {
+                        print("Error downloading: \(error)")
+                        return
+                    }
+                    cell.imageView?.image = UIImage.init(data: data!)
+                }
+            } else if let URL = URL(string: imageURL), let data = try? Data(contentsOf: URL) {
+                cell.imageView?.image = UIImage.init(data: data)
+            }
+            cell.textLabel?.text = "sent by: \(name)"
+        } else {
+            let text = message[Constants.MessageFields.text] as String!
+            if text != nil{
             cell.textLabel?.text = name! + ": " + text!
-            cell.backgroundColor = UIColor.white
-            cell.tintColor = UIColor.white
+            }
             cell.imageView?.image = UIImage(named: "ic_account_circle")
             if let photoURL = message[Constants.MessageFields.photoURL], let URL = URL(string: photoURL), let data = try? Data(contentsOf: URL) {
                 cell.imageView?.image = UIImage(data: data)
-                
-
+            }
         }
         return cell
     }

@@ -46,6 +46,7 @@ class SignUp: UIViewController {
     
     func setDisplayName(_ user: FIRUser) {
         let changeRequest = user.profileChangeRequest()
+        
         changeRequest.displayName = nameText.text!
         changeRequest.commitChanges(){ (error) in
             if let error = error {

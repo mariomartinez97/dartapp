@@ -7,34 +7,36 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>391352157587-kv3i9th07olqhcc8qf6u2o4j9qiure7c.apps.googleusercontent.com</string>
+	<string>654221705388-kevqarret995rncd02kbhpkndi1or2ls.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.391352157587-kv3i9th07olqhcc8qf6u2o4j9qiure7c</string>
+	<string>com.googleusercontent.apps.654221705388-kevqarret995rncd02kbhpkndi1or2ls</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>654221705388-44t7bhjrlhr2d1egf6d8mutusb94tsmm.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDloM1FG68kyNuh1GDWGyAeupxa8Qek4kA</string>
+	<string>AIzaSyCH2XlDklrWiV5YCX3_1KRfnAfsNd5Ne7g</string>
 	<key>GCM_SENDER_ID</key>
-	<string>391352157587</string>
+	<string>654221705388</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.swift3dartapp.ios</string>
+	<string>com.dart.ios</string>
 	<key>PROJECT_ID</key>
-	<string>swift3dartapp</string>
+	<string>dartapp-a5b55</string>
 	<key>STORAGE_BUCKET</key>
-	<string>swift3dartapp.appspot.com</string>
+	<string>dartapp-a5b55.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
 	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:391352157587:ios:3bf0933e2680eca0</string>
+	<string>1:654221705388:ios:9977225e4e9eaa98</string>
 	<key>DATABASE_URL</key>
-	<string>https://swift3dartapp.firebaseio.com</string>
+	<string>https://dartapp-a5b55.firebaseio.com</string>
 </dict>
 </plist>

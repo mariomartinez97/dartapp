@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendlyChatSwift/FCViewController.swift"
-            timestampString = "498080239.008741"
+            timestampString = "498498466.272108"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "configureDatabase()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,14 +105,62 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FriendlyChatSwift/FCViewController.swift"
-            timestampString = "498076867.116947"
+            filePath = "FriendlyChatSwift/SettingsViewController.swift"
+            timestampString = "498509173.670091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "configureDatabase()"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "pressSave(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FriendlyChatSwift/SettingsViewController.swift"
+            timestampString = "498508310.803174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "pressSave(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead&gt; of FriendlyChatSwift.SettingsViewController.pressSave (Swift.AnyObject) -&gt; ()"
+                  moduleName = "FriendlyChatSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mario/Desktop/swif3App/swift-starter/FriendlyChatSwift/SettingsViewController.swift"
+                  timestampString = "498508331.268469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead&gt; of FriendlyChatSwift.SettingsViewController.pressSave (Swift.AnyObject) -&gt; ()"
+                  moduleName = "FriendlyChatSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mario/Desktop/swif3App/swift-starter/FriendlyChatSwift/SettingsViewController.swift"
+                  timestampString = "498508331.270947"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
